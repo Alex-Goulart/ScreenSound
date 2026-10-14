@@ -27,4 +27,7 @@ albumDoLinkinPark.AdicionarMusica(musica3);
 albumDoLinkinPark.AdicionarMusica(musica4);
 albumDoLinkinPark.AdicionarMusica(musica5);
 
-albumDoLinkinPark.ExibirAlbum();
+Banda linkinPark = new Banda();
+linkinPark.NomeBanda = "Linkin Park";
+linkinPark.AdicionarAlbum(albumDoLinkinPark);
+linkinPark.ExibirDiscografia();
