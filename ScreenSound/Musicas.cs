@@ -1,25 +1,30 @@
-﻿class Musicas
+﻿class Musica
 {
-    public string NomeMusica { get; set; }
-    public string Artista { get; set; }
-    public int Duracao { get; set; } // duração em segundos
-    public bool Disponivel { get; set; }// indica se a música está disponível para reprodução 
+    public Musica(Banda artista)
+    {
+        Artista = artista;
+    }
 
-    public string DescriçãoResumida => $"A Musica {NomeMusica} pertencea a banda {Artista}";
+    public string Nome { get; set; }
+    public Banda Artista { get; }
+    public int Duracao { get; set; }
+    public bool Disponivel { get; set; }
+    public string DescricaoResumida =>
+        $"A música {Nome} pertence à banda {Artista}";
 
 
     public void ExibirFichaTecnica()
     {
-        Console.WriteLine($"Música: {NomeMusica}");
+        Console.WriteLine($"Nome: {Nome}");
         Console.WriteLine($"Artista: {Artista}");
-        Console.WriteLine($"Duração: {Duracao} segundos");
-        if(Disponivel)
+        Console.WriteLine($"Duração: {Duracao}");
+        if (Disponivel)
         {
-            Console.WriteLine("Disponível no seu plano");
+            Console.WriteLine("Disponível no plano.");
         }
         else
         {
-            Console.WriteLine("Indisponível no seu plano adquira o plano+");
+            Console.WriteLine("Adquira o plano Plus+");
         }
     }
 }
