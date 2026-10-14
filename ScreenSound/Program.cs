@@ -15,11 +15,11 @@ musica3.Duracao = 196;
 
 Musicas musica4 = new Musicas();
 musica4.NomeMusica = "Faint";
-musica4.Duracao = 162;
+musica4.Duracao = 163;
 
 Musicas musica5 = new Musicas();
 musica5.NomeMusica = "From the Inside";
-musica5.Duracao = 175;
+musica5.Duracao = 176;
 
 albumDoLinkinPark.AdicionarMusica(musica1);
 albumDoLinkinPark.AdicionarMusica(musica2);
