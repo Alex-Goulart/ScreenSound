@@ -1,21 +1,24 @@
-﻿Banda linkinPark = new Banda();
-linkinPark.Nome = "Linkin Park";
+﻿Banda evanescence = new Banda("Evanescence");
 
-Album albumDoLinkinPark = new Album();
-albumDoLinkinPark.Nome = "Meteora";
+Album albumevanescence = new Album("Fallen");
 
-Musica musica1 = new Musica(linkinPark);
-musica1.Nome = "Numb";
-musica1.Duracao = 187;
+Musica musica1 = new Musica(evanescence, "Bring Me to Life")
+{
+    Duracao = 242,
+    Disponivel = true
+};
 
-Musica musica2 = new Musica(linkinPark);
-musica2.Nome = "Faint";
-musica2.Duracao = 163;
+Musica musica2 = new Musica(evanescence, "My Immortal")
+{
+    Duracao = 264,
+    Disponivel = false,
+};
 
-albumDoLinkinPark.AdicionarMusica(musica1);
-albumDoLinkinPark.AdicionarMusica(musica2);
+albumevanescence.AdicionarMusica(musica1);
+albumevanescence.AdicionarMusica(musica2);
+evanescence.AdicionarAlbum(albumevanescence);
 
-
-linkinPark.AdicionarAlbum(albumDoLinkinPark);
-
-linkinPark.EbibirDiscografia();
+musica1.ExibirFichaTecnica();
+musica2.ExibirFichaTecnica();
+albumevanescence.ExibirMusicasDoAlbum();
+evanescence.ExibirDiscografia();
