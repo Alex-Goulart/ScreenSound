@@ -5,13 +5,13 @@ Album albumevanescence = new Album("Fallen");
 Musica musica1 = new Musica(evanescence, "Bring Me to Life")
 {
     Duracao = 242,
-    Disponivel = true
+    Disponivel = true,
 };
 
 Musica musica2 = new Musica(evanescence, "My Immortal")
 {
     Duracao = 264,
-    Disponivel = false,
+    Disponivel = true,
 };
 
 albumevanescence.AdicionarMusica(musica1);
