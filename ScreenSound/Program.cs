@@ -1,24 +1,12 @@
-﻿Banda evanescence = new Banda("Evanescence");
+﻿Episodio ep1 = new(2, "Técnicas de facilitação", 45);
+ep1.AdicionarConvidados("Alex");
+ep1.AdicionarConvidados("Tiago");
 
-Album albumevanescence = new Album("Fallen");
+Episodio ep2 = new(1, "Programação C#", 60);
+ep2.AdicionarConvidados("Marcos");
+ep2.AdicionarConvidados("Marcelo");
 
-Musica musica1 = new Musica(evanescence, "Bring Me to Life")
-{
-    Duracao = 242,
-    Disponivel = true,
-};
-
-Musica musica2 = new Musica(evanescence, "My Immortal")
-{
-    Duracao = 264,
-    Disponivel = true,
-};
-
-albumevanescence.AdicionarMusica(musica1);
-albumevanescence.AdicionarMusica(musica2);
-evanescence.AdicionarAlbum(albumevanescence);
-
-musica1.ExibirFichaTecnica();
-musica2.ExibirFichaTecnica();
-albumevanescence.ExibirMusicasDoAlbum();
-evanescence.ExibirDiscografia();
+Podcast podcast = new("Desafio Prático Programação C#", "Alura");
+podcast.AdcionarEpisodio(ep1);
+podcast.AdcionarEpisodio(ep2);
+podcast.ExibirDetalhes();
