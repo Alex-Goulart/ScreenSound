@@ -1,18 +1,18 @@
 ﻿class Episodio
 {
     private List<string> convidados = new();
-    public Episodio(int numero, string titulo, int duracao, string resumo)
+
+    public Episodio(int ordem, string titulo, int duracao)
     {
-        Numero = numero;
+        Ordem = ordem;
         Titulo = titulo;
         Duracao = duracao;
-        Resumo = resumo;
     }
 
-    public int Numero { get; set; }
-    public string Titulo { get; set; }
-    public int Duracao { get; set; }
-    public string Resumo { get; set; }
+    public int Ordem { get; }
+    public string Titulo { get; }
+    public int Duracao { get; }
+    public string Resumo { get; }
 
     public void AdicionarConvidados(string convidado) 
     { 
@@ -21,7 +21,7 @@
 
     public void ResumoCompleto()
     {
-        Console.WriteLine($"Episódio: {Numero} - {Titulo} | Duração: {Duracao} mim |" +
-            $"Resumo: {Resumo} | Convidados: {string.Join("," convidados)}");
+        Console.WriteLine($"Episódio: {Ordem} - {Titulo} | Duração: {Duracao} mim |" +
+            $"Resumo: {Resumo} | Convidados: {string.Join(",", convidados)}");
     }
 }
